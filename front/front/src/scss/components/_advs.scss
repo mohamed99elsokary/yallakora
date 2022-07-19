@@ -1,0 +1,20 @@
+.side-adv {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+
+  font: {
+    size: var(--h2-font-size);
+    weight: var(--font-bold);
+  }
+  img {
+    object-fit: cover;
+  }
+}
+
+.matches-list .side-adv {
+}

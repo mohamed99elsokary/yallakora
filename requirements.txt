@@ -1,0 +1,7 @@
+djangorestframework
+drf-yasg
+django-ckeditor
+django-cors-headers
+mysqlclient
+pymysql
+django-jazzmin

@@ -1,0 +1,86 @@
+footer {
+  position: relative;
+  @include bg-black;
+
+  .up {
+    padding: 20px;
+    border-bottom: 1px solid #2c2c2c;
+    text-align: center;
+  }
+  .down {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    .linksMenu,
+    .copyright {
+      display: flex;
+      align-items: center;
+      direction: rtl;
+    }
+    .copyright {
+      justify-content: flex-end;
+      p {
+        font-size: var(--smaller-font-size);
+        color: #eee;
+        line-height: 34px;
+        margin-left: 6px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 20px;
+          margin-left: 3px;
+        }
+      }
+
+      a {
+        font-size: var(--smaller-font-size);
+        font-weight: 600;
+        color: var(--second-color);
+        position: relative;
+      }
+    }
+    .linksMenu {
+      text-align: right;
+      a {
+        margin-left: 20px;
+        font-size: var(--smaller-font-size);
+        font-weight: 400;
+        color: #fff;
+        position: relative;
+        &:hover {
+          color: var(--second-color);
+        }
+      }
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  footer .down {
+    .copyright,
+    .linksMenu {
+      justify-content: center;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

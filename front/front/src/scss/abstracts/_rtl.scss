@@ -1,0 +1,15 @@
+* {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+a {
+  transition: 0.4s;
+}
+
+nav,
+main {
+  direction: rtl;
+  font-family: var(--body-font);
+}

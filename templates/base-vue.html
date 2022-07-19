@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block html %}
+<!DOCTYPE html>
+<html {% block html_tag_attributes %}{{ block.super }}{% endblock %}>
+  <head>
+    {% block head %}{{ block.super }}{% endblock %}
+
+    <!-- html-webpack-inject will inject head assets below -->
+  <link href="http://127.0.0.1:8080/js/app.js" rel="preload" as="script"><link href="http://127.0.0.1:8080/js/chunk-vendors.js" rel="preload" as="script"></head>
+  <body {% block body_tag_attributes %}{{ block.super }}{% endblock %}>
+    {% block body %}{{ block.super }}{% endblock %}
+    <!-- html-webpack-inject will inject body assets below -->
+    <!-- Start Social bar Ads -->
+    <script
+      type="text/javascript"
+      src="//pantomimethat.com/7c/dc/2b/7cdc2bc9ce0bc5b79a75036a55b440d1.js"
+    ></script>
+    <!-- End Social bar Ads -->
+
+    <!-- Start Popunder Ads -->
+    <script
+      type="text/javascript"
+      src="//pantomimethat.com/91/39/2a/91392a790e98af59f21aad1f0c6a3451.js"
+    ></script>
+    <!-- End Popunder Ads -->
+  <script type="text/javascript" src="http://127.0.0.1:8080/js/chunk-vendors.js"></script><script type="text/javascript" src="http://127.0.0.1:8080/js/app.js"></script></body>
+</html>
+{% endblock %}

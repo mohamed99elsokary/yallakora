@@ -1,0 +1,110 @@
+.navbar {
+  background-color: #fff !important;
+  box-shadow: 0 2px 6px 0 #8a8a8a;
+  padding: 0;
+  height: 50px;
+  .container {
+    padding-left: 0;
+    position: relative;
+  }
+
+  .navbar-brand {
+    // padding: 0.5rem 0;
+    margin: 0 0 0 1rem;
+    padding: 0;
+    img {
+      // max-width: 250px;
+      width: 250px;
+      height: 24px;
+    }
+  }
+
+  .nav-item {
+    a.nav-link {
+      color: var(--main-color);
+      transition: 0.3s;
+      font-size: var(--normal-font-size);
+
+      &:hover {
+        color: var(--second-color);
+      }
+      &.router-link-active {
+        color: var(--second-color);
+      }
+    }
+  }
+
+  .social-media {
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      $brand-colors: ("facebook", var(--facebook-bg)),
+        ("instagram", var(--instagram-bg)), ("youtube", var(--youtube-bg));
+
+      li {
+        font-size: var(--h2-font-size);
+        transition: 0.3s;
+        padding: 7px 0;
+        @each $color in $brand-colors {
+          &.#{nth($color,1)}:hover {
+            background-color: nth($color, 2);
+          }
+        }
+
+        a {
+          color: var(--main-color);
+          padding: 3px 8px;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  .social-media {
+    position: absolute;
+    left: 50px;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    left: 0;
+    top: 41px;
+    background: #fff;
+    width: 100%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .navbar .navbar-brand img {
+    max-width: 210px;
+  }
+}
+
+@media (max-width: 400px) {
+  .social-media {
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

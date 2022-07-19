@@ -1,0 +1,37 @@
+.logo {
+  font: {
+    size: var(--h2-font-size);
+    weight: var(--font-bold);
+  }
+  margin: 0;
+  color: var(--main-color);
+}
+
+footer .logo {
+  color: #fff;
+}
+
+.list_header {
+  color: var(--main-color);
+  text-align: right;
+  font: {
+    size: var(--h1-font-size);
+    weight: var(--font-bold);
+  }
+  margin-bottom: 1rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  font: {
+    size: var(--normal-font-size);
+    weight: var(--font-medium);
+  }
+  color: #fff;
+  background-color: var(--main-color);
+  &:hover {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+  }
+}

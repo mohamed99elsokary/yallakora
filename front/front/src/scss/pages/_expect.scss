@@ -1,0 +1,277 @@
+.expect {
+  // background-color: var(--main-color);
+  padding: 100px 0 80px;
+  margin-top: 0;
+  &-header h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    color: var(--main-color);
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+  .expect-list {
+    &_header {
+      border-bottom: 1px solid #fff;
+
+      p {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-bold);
+        text-align: right;
+
+        background-color: var(--main-alt);
+        margin: 0;
+        padding: 15px 0;
+      }
+    }
+    .accordion-item {
+      border-radius: 0;
+      .accordion-button {
+        background-color: var(--main-color);
+        outline: none;
+        box-shadow: none;
+        color: #fff;
+        border-radius: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1.25rem;
+        .fa-chevron-up {
+          transition: 0.3s;
+          color: var(--second-color);
+        }
+        &::after {
+          display: none;
+        }
+        &.collapsed {
+          .fa-chevron-up {
+            transform: rotate(-180deg);
+            color: #fff;
+          }
+        }
+        p {
+          margin: 0;
+          font-weight: 700;
+          font-size: var(--normal-font-size);
+        }
+
+        .expect-match {
+          width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          > p {
+            font-size: var(--h2-font-size);
+          }
+
+          .team {
+            width: 49%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            &:last-of-type {
+              justify-content: flex-start;
+            }
+          }
+          .teamA {
+            text-align: left;
+            margin-left: 20px;
+          }
+          .teamB {
+            text-align: right;
+            margin-right: 20px;
+          }
+          .teamImg img {
+            height: 40px;
+            width: 60px;
+            object-fit: cover;
+          }
+          .teamName {
+            margin: 0 20px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .accordion-collapse {
+        padding: 10px 20px;
+        color: var(--main-color);
+        background-color: var(--bg-alt);
+
+        .expect-form {
+          &_header {
+            width: 100%;
+            background: #535353;
+            color: #fff;
+            border-radius: 6px 6px 0 0;
+
+            p {
+              margin: 0;
+              padding: 10px 16px;
+            }
+          }
+          .right {
+            .expect-form_body {
+              padding: 10px 16px;
+              border: 1px solid #535353;
+              border-radius: 0 0 6px 6px;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              font-size: var(--normal-font-size);
+
+              p {
+                margin: 0;
+              }
+              input.number {
+                margin: 6px 0;
+                text-align: center;
+                border: none;
+                outline: 0;
+                border-bottom: 2px solid #535353;
+                background: 0 0;
+                width: 38px;
+                font-weight: bold;
+                height: 38px;
+                color: var(--second-color);
+                font-size: var(--h3-font-size);
+              }
+              .team {
+                text-align: center;
+                img {
+                  width: 40px;
+                }
+              }
+            }
+          }
+
+          .left {
+            .expect-form_body {
+              border: 1px solid #535353;
+              display: flex;
+              height: 86px;
+              border-radius: 0 0 6px 6px;
+
+              .form-check {
+                width: 33.33%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 0;
+                font-size: var(--normal-font-size);
+
+                margin: 0;
+                &:not(:last-of-type) {
+                  border-left: 1px solid #535353;
+                }
+                .form-check-input {
+                  visibility: hidden;
+                  position: absolute;
+                }
+                .form-check-input:checked + .form-check-label {
+                  background-color: var(--main-color);
+                  transition: 0.3s;
+                  color: var(--second-color);
+                }
+                .form-check-label {
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  cursor: pointer;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+          input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin: 25px 0 10px;
+            background: #535353;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            transition: 0.4s;
+            font-size: var(--normal-font-size);
+
+            &:hover {
+              color: var(--second-color);
+              background-color: var(--main-color);
+            }
+          }
+          input {
+            box-shadow: none;
+            font-size: var(--normal-font-size);
+          }
+        }
+      }
+      border: none;
+      border-bottom: 1px solid #535353;
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 576px) {
+  .expect > .container {
+    max-width: 590px;
+  }
+}
+
+@media (max-width: 992px) {
+  .side-adv {
+    margin-top: 2rem;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 575px) {
+  .expect-form .left {
+    margin-top: 1rem;
+  }
+  .expect .expect-list .accordion-item .accordion-button {
+    padding: 0.5rem;
+    .expect-match {
+      .teamImg {
+        // display: none;
+      }
+      .teamName {
+        // margin: 0;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 520px) {
+  .expect-form .left {
+    margin-top: 1rem;
+  }
+  .expect .expect-list .accordion-item .accordion-button {
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+    .expect-match {
+      width: 100%;
+      margin-top: 1rem;
+      .teamImg img {
+        max-height: 40px;
+      }
+      .teamA {
+        margin-left: 1rem;
+        .teamName {
+          margin: 0 0 0 1rem;
+        }
+      }
+      .teamB {
+        margin-right: 1rem;
+        .teamName {
+          margin: 0 1rem 0 0;
+        }
+      }
+    }
+    svg {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+    }
+  }
+}

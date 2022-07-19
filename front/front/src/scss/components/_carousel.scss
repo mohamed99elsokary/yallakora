@@ -1,0 +1,115 @@
+.carousel {
+  // max-height: 90vh;
+  overflow: hidden;
+  .carousel-item {
+    position: relative;
+    &:first-of-type {
+      .carousel-caption {
+        text-align: left;
+
+        > img {
+          position: absolute;
+          left: 40%;
+          bottom: -250px;
+          width: 600px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .carousel-caption > img {
+        position: absolute;
+        right: 55%;
+        bottom: 20px;
+        width: 320px;
+      }
+    }
+    // &::after {
+    //   position: absolute;
+    //   content: "";
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 1;
+    //   background-color: #080f21;
+    //   opacity: 0.4;
+    // }
+    .main-img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      height: 70%;
+      z-index: 8;
+      text-transform: capitalize;
+      text-align: right;
+      h1 {
+        font-weight: 900;
+        font-size: var(--h1-font-size);
+      }
+      p {
+        font-size: var(--h1-font-size);
+        font-weight: 500;
+        color: var(--second-color);
+      }
+    }
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  z-index: 9;
+}
+
+// .scale-up-bottom {
+//   animation: scale-up-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+//   animation-delay: 1s;
+// }
+
+// @keyframes scale-up-bottom {
+//   0% {
+//     bottom: -900px;
+//   }
+//   100% {
+//     bottom: -200px;
+//   }
+// }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .carousel,
+  .carousel .carousel-item .main-img {
+    height: 221px;
+    overflow: hidden;
+  }
+  .carousel .carousel-item:nth-of-type(2) .carousel-caption > img {
+    bottom: -50px;
+    width: 210px;
+  }
+  .carousel .carousel-item:first-of-type .carousel-caption > img {
+    bottom: -210px;
+    width: 420px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 530px) {
+  .intro .carousel .carousel-item .carousel-caption {
+    text-align: center;
+    > img {
+      display: none;
+    }
+  }
+}
