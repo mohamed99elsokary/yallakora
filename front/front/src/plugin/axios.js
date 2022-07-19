@@ -6,7 +6,7 @@ import axios from "axios";
 // });
 
 const instance = axios.create({
-	baseURL: "https://yallashotalkora.com/api/",
+	baseURL: "http://yallashotalkora.com/api/",
 	headers: { "Content-Type": "application/json; charset=UTF-8" },
 });
 
